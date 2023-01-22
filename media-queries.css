@@ -1,0 +1,126 @@
+@media screen and (min-width:1024px) {
+    
+    .about-text{
+        font-size: 1.5rem;
+    }
+    
+}
+
+@media  screen and (max-width:1023px){
+    /* nav-menu */
+    .hamburger-menu{
+        display: block;
+        margin-right: 20px;
+        z-index: 50;
+    }
+
+    .nav-links{
+        position: absolute;
+        background-color: black;
+        color: black;
+        top: 1.5rem;
+        right: -100%;
+        height: 600px;
+        width: 30%;
+        padding-block: 10px;
+        margin-inline: 1rem;
+        transition: 0.2s ease-in-out;
+    }
+
+    .nav-links.active{
+        right: 0;
+    }
+
+    .nav-bar{
+        overflow: initial;
+    }
+
+    .nav-links ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-links ul li a{
+        font-size:xx-large;
+    }
+
+    /* section settings */
+    
+    .my_info{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .about-text{
+        font-size: var(--paragraph);
+    }
+
+    .rotate-left{
+        transform: none;
+        position: initial;
+        left: initial;
+    }
+    
+    .rotate-right{
+        transform: none;
+        position: initial;
+        right: initial;
+    }
+
+    .section-container{
+        flex-direction: column;
+        padding-block: 2px;
+        gap: 20px;
+    }
+
+    .section-container:nth-child(2n){
+        flex-direction: column;
+    }
+
+    .section-container:nth-child(2n+1){
+        flex-direction: column;
+    }
+
+    .skills-area{
+        gap: 1.5rem;
+    }
+    .project-area{
+        grid-template-columns: repeat(2,1fr);
+        margin-block-end: 10px;
+    }
+
+    #home{
+        background-position:top left;
+    }
+
+}
+
+@media  screen and (max-width:767px){
+    
+    :root{
+        --heading:1.4rem;
+        --bar-text:2rem;
+        --paragraph:1rem;
+    }
+
+    .skills-container{
+        grid-row: span 1;
+    }
+
+    .school-details h4{
+        font-size: 20px;
+    }
+
+    .school-details p{
+        font-size: 10px;
+        padding: 2px;
+    }
+
+    .details-container h3 {
+        font-size: 16px;
+    }
+
+    #home{
+        background-position:top center;
+    }
+}
