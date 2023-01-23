@@ -81,12 +81,13 @@
         flex-direction: column;
     }
 
-    .skills-area{
-        gap: 1.5rem;
+    .skills-container{
+        width:250px;
     }
+
     .project-area{
         grid-template-columns: repeat(2,1fr);
-        margin-block-end: 10px;
+        margin: 10px;
     }
 
     #home{
@@ -96,31 +97,47 @@
 }
 
 @media  screen and (max-width:767px){
-    
+
     :root{
-        --heading:1.4rem;
-        --bar-text:2rem;
-        --paragraph:1rem;
+        --bar-text:32px;
     }
 
-    .skills-container{
-        grid-row: span 1;
-    }
-
-    .school-details h4{
-        font-size: 20px;
-    }
-
-    .school-details p{
-        font-size: 10px;
-        padding: 2px;
-    }
-
-    .details-container h3 {
-        font-size: 16px;
+    .hamburger-menu{
+        width: 25px;
     }
 
     #home{
-        background-position:top center;
+        background-position: center;
+        align-items: flex-end;
+    }
+
+    .home-text{
+        margin-bottom: 80px;
+    }
+
+    .skills-container{
+        width:300px;
+    }
+
+    .education-area{
+        grid-template-columns: auto;
+        margin:16px;
+    }
+
+    .project-area{
+        grid-template-columns: auto;
+        margin: 16px;
+    }
+
+    #contact-form {
+        margin-left: 15%;
+    }
+
+    .details-container h3{
+        font-size: 20px;
+    }
+
+    .details-info-container{
+        font-size: 18px;
     }
 }
