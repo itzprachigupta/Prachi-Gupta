@@ -100,6 +100,7 @@
 
     :root{
         --bar-text:32px;
+        --paragraph:25px;
     }
 
     .hamburger-menu{
@@ -117,6 +118,7 @@
 
     .skills-container{
         width:300px;
+        font-size: 32px;
     }
 
     .education-area{
@@ -129,8 +131,31 @@
         margin: 16px;
     }
 
-    #contact-form {
-        margin-left: 15%;
+    .about-project h1{
+        font-size: 30px;
+    }
+    
+    .about-project h2{
+        font-size: 25px;
+    }
+    
+    .about-project p{
+        font-size: 20px;
+    }
+
+
+    .contact{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .details-container{
+        width: 100%;
+        margin-left: 60px;
+
     }
 
     .details-container h3{
@@ -139,5 +164,14 @@
 
     .details-info-container{
         font-size: 18px;
+    }
+
+    .contact-container{
+        width: 100%;
+        text-align: center;
+    }
+
+    #contact-form {
+        margin-left: 0;
     }
 }
