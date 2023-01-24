@@ -41,7 +41,7 @@
     }
     
     .nav-links ul li a{
-        font-size:xx-large;
+        font-size:24px;
     }
 
     /* section settings */
@@ -58,13 +58,11 @@
     .rotate-left{
         transform: none;
         position: initial;
-        left: initial;
     }
     
     .rotate-right{
         transform: none;
         position: initial;
-        right: initial;
     }
 
     .section-container{
@@ -99,8 +97,11 @@
 @media  screen and (max-width:767px){
 
     :root{
+        --heading:32px;
+        --sub-heading: 18px;
         --bar-text:32px;
-        --paragraph:25px;
+        --paragraph:16px;
+
     }
 
     .hamburger-menu{
@@ -112,12 +113,13 @@
         align-items: flex-end;
     }
 
-    .home-text{
-        margin-bottom: 80px;
+    .my-image{
+        height: 15rem;
     }
 
     .skills-container{
-        width:300px;
+        width:200px;
+        height: 200px;
         font-size: 32px;
     }
 
@@ -126,23 +128,34 @@
         margin:16px;
     }
 
+    .school-details h4{
+        font-size: 18px;
+    }
+
+    .school-details p{
+        font-size: 16px;
+    }
+
     .project-area{
         grid-template-columns: auto;
         margin: 16px;
     }
 
-    .about-project h1{
-        font-size: 30px;
+    .project-image{
+        height: 200px;
     }
-    
-    .about-project h2{
+
+    .about-project h1{
         font-size: 25px;
     }
     
-    .about-project p{
-        font-size: 20px;
+    .about-project h2{
+        font-size: 22px;
     }
-
+    
+    .about-project p{
+        font-size: 18px;
+    }
 
     .contact{
         display: flex;
@@ -174,4 +187,5 @@
     #contact-form {
         margin-left: 0;
     }
+
 }
