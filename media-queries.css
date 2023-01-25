@@ -6,24 +6,29 @@
     
 }
 
+
+/* #181818 */
+/* #303030 */
+
+
 @media  screen and (max-width:1023px){
     /* nav-menu */
     .hamburger-menu{
         display: block;
-        margin-right: 20px;
+        /* margin-right: 20px; */
         z-index: 50;
     }
 
     .nav-links{
         position: absolute;
-        background-color: black;
-        color: black;
+        background-color:#000000ce;
         top: 1.5rem;
         right: -100%;
-        height: 600px;
-        width: 30%;
+        /* height: 600px; */
+        width: 32%;
         padding-block: 10px;
-        margin-inline: 1rem;
+        margin: 15px;
+        margin-top: 0;
         transition: 0.2s ease-in-out;
     }
 
@@ -53,6 +58,8 @@
 
     .about-text{
         font-size: var(--paragraph);
+        padding: 0;
+        margin:5px;
     }
 
     .rotate-left{
@@ -97,10 +104,10 @@
 @media  screen and (max-width:767px){
 
     :root{
-        --heading:32px;
-        --sub-heading: 18px;
-        --bar-text:32px;
-        --paragraph:16px;
+        --heading:28px;
+        --sub-heading: 15px;
+        --bar-text:28px;
+        --paragraph:12px;
 
     }
 
@@ -109,8 +116,22 @@
     }
 
     #home{
-        background-position: center;
+        background-position:top center;
         align-items: flex-end;
+        font-size: 20px;
+        padding-left: 30px;
+        padding-block: 30px;
+        text-align: left;
+        background-image: url(images/bg-image-small.png);
+        background-size: cover;
+    }
+
+    .nav-links ul{
+        gap: 20px;
+    }
+
+    .nav-links ul li a{
+        font-size: 20px;
     }
 
     .my-image{
@@ -118,22 +139,15 @@
     }
 
     .skills-container{
-        width:200px;
-        height: 200px;
-        font-size: 32px;
+        width:140px;
+        height: 140px;
+        font-size: 20px;
+        gap:10px;
     }
 
     .education-area{
         grid-template-columns: auto;
         margin:16px;
-    }
-
-    .school-details h4{
-        font-size: 18px;
-    }
-
-    .school-details p{
-        font-size: 16px;
     }
 
     .project-area{
@@ -146,15 +160,15 @@
     }
 
     .about-project h1{
-        font-size: 25px;
+        font-size: 20px;
     }
     
     .about-project h2{
-        font-size: 22px;
+        font-size: 18px;
     }
     
     .about-project p{
-        font-size: 18px;
+        font-size: 15px;
     }
 
     .contact{
@@ -167,8 +181,8 @@
 
     .details-container{
         width: 100%;
-        margin-left: 60px;
-
+        padding: 20px;
+        margin: 0;
     }
 
     .details-container h3{
