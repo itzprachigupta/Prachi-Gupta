@@ -9,9 +9,11 @@
     position:absolute;
     align-items: center;
     overflow: hidden;
-    padding-inline: 1rem;
-    padding-block-start: 1rem;
-    background-color: #181818;
+    padding-inline: 0.8rem;
+    padding-block-start: 0.8rem;
+    background-size: contain;
+    background: url("images/background.jpeg");
+    background-size: contain;
 }
 :root{
     --box-shadow: 0 0 0.5rem white;
@@ -20,13 +22,12 @@
     --secondary-color: #f50449;
     --bar-color:white;
     --padding-block-section:40px;
-    --card-color:black;
-    --heading:3rem;
-    --sub-heading: 2rem;
-    --bar-text:3rem;
-    --paragraph:1.7rem;
-    --section-background-color: #303030;
-    --section-border: #f50449 solid 4px ;
+    --heading:2rem;
+    --sub-heading: 1.5rem;
+    --bar-text:2rem;
+    --paragraph:1.2rem;
+    --section-background-color: rgba(0, 0, 0, 0.664);
+    --section-border: #f50449 solid 0.125rem ;
 }
 
 .text-highlight{
@@ -58,11 +59,10 @@ ul{
 /* nav bar */
 
 .nav-bar{
-    /* background-color:var(--navbar-color); */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem;
 }
 
 .nav-bar ul{
@@ -97,24 +97,51 @@ ul{
 #home{
     display: flex;
     align-items: center;
+    justify-content: space-around;
     color: var(--primary-color);
-    font-size: 40px;
-    margin-block: 40px;
-    padding-inline: 30px;
-    padding-left: 70px;
-    background-image: url(images/bg-image-large.jpg);
-    background-position:right top;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 550px;
+    margin-block: 2.5rem;
+    height: 30rem;
     background-color: var(--section-background-color);
     border:var(--section-border);
 }
 
+.home-text{
+    flex-basis: 30%;
+    font-size: 2rem;
+}
+
+.home-image{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.home-image img{
+    height: 90%;
+    background-image: url(images/bg-image.jpg);
+}
+
+.home-image img:hover {
+    animation-name: my-image;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+@keyframes my-image {
+    from{ 
+        height: 90%;
+    }
+    to{
+        height: 100%;
+    }
+}
+
+
 .name-highlight{
     display: inline-block;
-    font-family:cursive;
-    font-style: italic;
+    font-family: 'Brush Script MT', cursive;
+    letter-spacing: 0.5rem;
 }
 
 .name-highlight::first-letter{
@@ -125,21 +152,25 @@ ul{
 /* sticky button */
 .sticky-button{
     position: fixed;
-    bottom: 1.8rem;
+    bottom: 3.5rem;
     left: -0.2rem;
     align-self:flex-start;
     z-index: 50;
 }
 
 .up-arrow{
-    height:4rem;
-    width: 4rem;
+    height:3rem;
+    width: 3rem;
     text-align:center;
 }
 
 .up-arrow img{
     height: 100%;
     z-index: 50;
+}
+
+.up-arrow a{
+    font-size: 1.1rem;
 }
 
 /* sections */
@@ -176,22 +207,22 @@ section{
     transform: rotate(-90deg);
     height: fit-content;
     position: absolute;
-    left: -115px;
+    left: -30px;
 }
 
 .rotate-right{
     transform: rotate(90deg);
     height: fit-content;
     position: absolute;
-    right: -110px;
+    right: -30px;
 }
 
 .rotate-margin-left{
-    left: -50px;
+    left: -60px;
 }
 
 .rotate-margin-right{
-    right: -50px;
+    right: -60px;
 }
 
 .section-container:nth-child(2n+1){
@@ -217,8 +248,9 @@ section{
 }
 
 .my-image{
-    height:25rem;
-    /* margin-left: 40px; */
+    height:20rem;
+    margin-block: 0.8rem;
+    margin-inline-start: 0.8rem;
 }
 
 .my-image img{
@@ -232,7 +264,7 @@ section{
 }
 
 .about-text{
-    padding:1rem;
+    padding:0.8rem;
     font-size: var(--paragraph);
     color: var(--primary-color);
     text-align: center;
@@ -253,16 +285,17 @@ section{
 }
 
 .skills-container{
-    color: #303030;
+    color:transparent;
     font-size: var(--heading);
     display: flex;
     flex-direction: column;
-    height: 350px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 1rem;
     background-color: var(--section-background-color);
     border:var(--section-border);
     border-radius: 5%;
@@ -287,19 +320,15 @@ section{
     margin: 8px;
     display: grid;
     flex-basis: 90%;
-    gap:1rem;
+    gap:0.8rem;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 300px;
+    grid-auto-rows: 350px;
 }
 
 .education-container{
     position: relative;
     color: var(--primary-color);
-    display: flex;
     height:100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
     border-radius: 2%;
     border:var(--section-border);
@@ -311,8 +340,14 @@ section{
     height: 100%;
 }
 
-.overlay {
+.school-details {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 1rem;
+    gap: 0.5rem;
     bottom: 100%;
     left: 0;
     right: 0;
@@ -320,32 +355,16 @@ section{
     overflow: hidden;
     width: 100%;
     height:0;
-    transition: .5s ease;
+    transition: .5s ease-in-out;
 }
 
-.education-container:hover .overlay {
+.education-container:hover .school-details {
     bottom: 0;
     height: 100%;
   }
 
 .education-container:hover{
     box-shadow: var(--box-shadow);
-}
-
-.school-details{
-    position: absolute;
-    text-align: center;
-}
-
-.school-details h4{
-    text-align: center;
-    color: var(--primary-color);
-    padding-top: 0.5rem;
-}
-
-.school-details p{
-    text-align: center;
-    font-weight: 500;
 }
 
 /* projects section */
@@ -373,7 +392,7 @@ section{
 }
 
 .project-image img{
-    height: calc(100% - 1rem);
+    height: calc(100% - 0.8rem);
     margin: 10px;
     width: 100%;
     border: black 5px solid;
@@ -427,7 +446,6 @@ button:hover{
     display: flex;
     flex-direction: column;
     background-color: black;
-    background: linear-gradient(to right , rgb(15, 14, 14), rgba(17, 16, 16, 0.938));
     justify-content: center;
     align-items: center;
     margin-top: 20px;
