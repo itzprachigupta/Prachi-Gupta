@@ -19,14 +19,14 @@
     --primary-color:white;
     --secondary-color: #f50449;
     --bar-color:white;
-    --padding-block-section:40px;
+    --padding-block-section:2.5rem;
     --card-color:black;
     --heading:3rem;
     --sub-heading: 2rem;
     --bar-text:3rem;
     --paragraph:1.7rem;
     --section-background-color: #303030;
-    --section-border: #f50449 solid 4px ;
+    --section-border: #f50449 solid 0.25rem ;
 }
 
 .text-highlight{
@@ -62,13 +62,13 @@ ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .nav-bar ul{
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 2.5rem;
     flex-wrap: wrap;
     justify-content: space-around;
 }
@@ -86,7 +86,7 @@ ul{
 
 .hamburger-menu{
     display: none;
-    width: 40px;
+    width: 2.5rem;
 }
 
 .hamburger-menu img{
@@ -97,19 +97,47 @@ ul{
 #home{
     display: flex;
     align-items: center;
+    justify-content: space-around;
     color: var(--primary-color);
-    font-size: 40px;
-    margin-block: 40px;
-    padding-inline: 30px;
-    padding-left: 70px;
-    background-image: url(images/bg-image-large.jpg);
-    background-position:right top;
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 550px;
+    font-size: 2.5rem;
+    margin-block: 2.5rem;
+    height: 50rem;
     background-color: var(--section-background-color);
     border:var(--section-border);
 }
+
+.home-text{
+    flex-basis: 30%;
+}
+
+.home-image{
+    height: 100%;
+}
+
+.home-image img{
+    height: 90%;
+    background-image: url(images/bg-image.jpg);
+    background-size: 215%;
+    background-repeat:no-repeat;
+    background-position:center bottom;
+}
+
+.home-image img:hover {
+    animation-name: my-image;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+}
+
+@keyframes my-image {
+    from{ 
+        height: 90%;
+    }
+    to{
+        height: 100%;
+    }
+}
+
 
 .name-highlight{
     display: inline-block;
@@ -125,21 +153,25 @@ ul{
 /* sticky button */
 .sticky-button{
     position: fixed;
-    bottom: 1.8rem;
+    bottom: 4rem;
     left: -0.2rem;
     align-self:flex-start;
     z-index: 50;
 }
 
 .up-arrow{
-    height:4rem;
-    width: 4rem;
+    height:5rem;
+    width: 5rem;
     text-align:center;
 }
 
 .up-arrow img{
     height: 100%;
     z-index: 50;
+}
+
+.up-arrow a{
+    font-size: 1.5rem;
 }
 
 /* sections */
@@ -159,7 +191,7 @@ section{
 }
 
 #about{
-    border-top: 5px solid white;
+    border-top: 0.30rem solid white;
 }
 
 /* heading bar of sections */
@@ -167,41 +199,41 @@ section{
 .bar{
     font-size: var(--bar-text);
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 0.30rem;
     color: white;
-    border-bottom: 5px solid white;
+    border-bottom: 0.30rem solid white;
 }
 
 .rotate-left{
     transform: rotate(-90deg);
     height: fit-content;
     position: absolute;
-    left: -115px;
+    left: -7.18rem;
 }
 
 .rotate-right{
     transform: rotate(90deg);
     height: fit-content;
     position: absolute;
-    right: -110px;
+    right: -6.87rem;
 }
 
 .rotate-margin-left{
-    left: -50px;
+    left: -3.125rem;
 }
 
 .rotate-margin-right{
-    right: -50px;
+    right: -3.125rem;
 }
 
 .section-container:nth-child(2n+1){
     flex-direction: row;
-    border-left: 5px white solid;
+    border-left: 0.30rem white solid;
 }
 
 .section-container:nth-child(2n){
     flex-direction: row-reverse;
-    border-right: 5px white solid;
+    border-right: 0.30rem white solid;
 }
 
 /* About section */
@@ -218,7 +250,6 @@ section{
 
 .my-image{
     height:25rem;
-    /* margin-left: 40px; */
 }
 
 .my-image img{
@@ -257,8 +288,8 @@ section{
     font-size: var(--heading);
     display: flex;
     flex-direction: column;
-    height: 350px;
-    width: 300px;
+    height: 22rem;
+    width: 22rem;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -284,12 +315,12 @@ section{
 /* education section */
 
 .education-area{
-    margin: 8px;
+    margin: 0.5rem;
     display: grid;
     flex-basis: 90%;
     gap:1rem;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 300px;
+    grid-auto-rows: 25rem;
 }
 
 .education-container{
@@ -298,8 +329,6 @@ section{
     display: flex;
     height:100%;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
     border-radius: 2%;
     border:var(--section-border);
@@ -311,8 +340,13 @@ section{
     height: 100%;
 }
 
-.overlay {
+.school-details {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
     bottom: 100%;
     left: 0;
     right: 0;
@@ -320,32 +354,16 @@ section{
     overflow: hidden;
     width: 100%;
     height:0;
-    transition: .5s ease;
+    transition: .5s ease-in-out;
 }
 
-.education-container:hover .overlay {
+.education-container:hover .school-details {
     bottom: 0;
     height: 100%;
   }
 
 .education-container:hover{
     box-shadow: var(--box-shadow);
-}
-
-.school-details{
-    position: absolute;
-    text-align: center;
-}
-
-.school-details h4{
-    text-align: center;
-    color: var(--primary-color);
-    padding-top: 0.5rem;
-}
-
-.school-details p{
-    text-align: center;
-    font-weight: 500;
 }
 
 /* projects section */
@@ -374,9 +392,9 @@ section{
 
 .project-image img{
     height: calc(100% - 1rem);
-    margin: 10px;
+    margin: 0.625rem;
     width: 100%;
-    border: black 5px solid;
+    border: black 0.3rem solid;
     border-radius: 5%;
 }
 
@@ -405,9 +423,9 @@ section{
 button{
     background: transparent;
     font-size: 0.95rem;
-    border: 2px solid white;
+    border: 0.125rem solid white;
     margin-top: 2%;
-    border-radius: 2px;
+    border-radius: 0.125rem;
     color: white;
     font-family: sans-serif;
     font-weight: 700;
@@ -430,13 +448,13 @@ button:hover{
     background: linear-gradient(to right , rgb(15, 14, 14), rgba(17, 16, 16, 0.938));
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 1.25rem;
     color: var(--primary-color);
 }
 
 .contact{
     display: flex;
-    gap: 20px;
+    gap: 1.25rem;
 }
 
 .contact-container{
@@ -450,10 +468,10 @@ button:hover{
 
 #contact-form input, textarea {
     max-width: 90%;
-    margin: 10px;
-    padding: 4px 10px;
-    border: 0px solid transparent;
-    border-bottom: 2px solid white;
+    margin: 0.625rem;
+    padding: 0.25rem 0.625rem;
+    border: 0rem solid transparent;
+    border-bottom: 0.125rem solid white;
     color: #d9dcdd;
     font-family:sans-serif;
     background: transparent;
@@ -471,24 +489,24 @@ button:hover{
 .details-container h3 {
     color: white;
     font-weight: 550;
-    font-size: 30px;
-    margin-block: 10px;
+    font-size: 1.875rem;
+    margin-block: 0.625rem;
 }
 
 .details-info-container{
-    margin-block: 10px;
+    margin-block: 0.625rem;
     width: fit-content;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .details-info-container a,.details-info-container span{
     display: flex;
     align-items:center;
-    gap: 8px;
+    gap: 0.5rem;
 }
 .details-info-container img{
-    width: 30px;
-    border-radius: 10px;
+    width: 1.875rem;
+    border-radius: 0.625rem;
 }
 
 .details-info-container img:hover{
@@ -497,7 +515,7 @@ button:hover{
 
 
 .copy-right{
-    margin-block-start: 10px;
+    margin-block-start: 0.625rem;
     margin-inline: 0;
     width: 120%;
     text-align: center;

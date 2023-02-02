@@ -15,7 +15,7 @@
     /* nav-menu */
     .hamburger-menu{
         display: block;
-        /* margin-right: 20px; */
+        /* margin-right: 1.25rem; */
         z-index: 50;
     }
 
@@ -27,7 +27,7 @@
         /* height: 600px; */
         width: 32%;
         padding-block: 10px;
-        margin: 15px;
+        margin: 0.9375rem;
         margin-top: 0;
         transition: 0.2s ease-in-out;
     }
@@ -46,7 +46,7 @@
     }
     
     .nav-links ul li a{
-        font-size:24px;
+        font-size: 1.5rem;
     }
 
     /* section settings */
@@ -59,7 +59,7 @@
     .about-text{
         font-size: var(--paragraph);
         padding: 0;
-        margin:5px;
+        margin:0.3125rem;
     }
 
     .rotate-left{
@@ -74,8 +74,8 @@
 
     .section-container{
         flex-direction: column;
-        padding-block: 2px;
-        gap: 20px;
+        padding-block: 0.125rem;
+        gap: 1.25rem;
     }
 
     .section-container:nth-child(2n){
@@ -87,7 +87,7 @@
     }
 
     .skills-container{
-        width:250px;
+        width:15.62rem;
     }
 
     .project-area{
@@ -104,34 +104,31 @@
 @media  screen and (max-width:767px){
 
     :root{
-        --heading:28px;
-        --sub-heading: 15px;
-        --bar-text:28px;
-        --paragraph:12px;
+        --heading:1.75rem;
+        --sub-heading: 0.9375rem;
+        --bar-text:1.75rem;
+        --paragraph:0.75rem;
 
     }
 
     .hamburger-menu{
-        width: 25px;
+        width: 1.56rem;
     }
 
     #home{
-        background-position:top center;
-        align-items: flex-end;
-        font-size: 20px;
-        padding-left: 30px;
-        padding-block: 30px;
-        text-align: left;
-        background-image: url(images/bg-image-small.png);
-        background-size: cover;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-left: 1.875rem;
+        padding-block: 1.875rem;
+        text-align: center;
     }
 
     .nav-links ul{
-        gap: 20px;
+        gap: 1.25rem;
     }
 
     .nav-links ul li a{
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .my-image{
@@ -141,18 +138,23 @@
     .skills-container{
         width:140px;
         height: 140px;
-        font-size: 20px;
+        font-size: 1.25rem;
         gap:10px;
     }
 
     .education-area{
         grid-template-columns: auto;
-        margin:16px;
+        margin:1rem;
+    }
+
+    
+    .school-details {
+        overflow-y: scroll;
     }
 
     .project-area{
         grid-template-columns: auto;
-        margin: 16px;
+        margin: 1rem;
     }
 
     .project-image{
@@ -160,7 +162,7 @@
     }
 
     .about-project h1{
-        font-size: 20px;
+        font-size: 1.25rem;
     }
     
     .about-project h2{
@@ -168,7 +170,7 @@
     }
     
     .about-project p{
-        font-size: 15px;
+        font-size: 0.9375rem;
     }
 
     .contact{
@@ -181,12 +183,12 @@
 
     .details-container{
         width: 100%;
-        padding: 20px;
+        padding: 1.25rem;
         margin: 0;
     }
 
     .details-container h3{
-        font-size: 20px;
+        font-size: 1.25rem;
     }
 
     .details-info-container{
