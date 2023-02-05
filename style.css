@@ -12,22 +12,22 @@
     padding-inline: 0.8rem;
     padding-block-start: 0.8rem;
     background-size: contain;
-    background: url("images/background.jpeg");
+    /* background: url("images/background.jpeg"); */
+    background:linear-gradient(to right, #4be3fa, #419fd1, #1e91dd);
     background-size: contain;
 }
 :root{
     --box-shadow: 0 0 0.5rem white;
     --navbar-color: #0801017c;
-    --primary-color:white;
-    --secondary-color: #f50449;
-    --bar-color:white;
+    --primary-color:black;
+    --secondary-color: white;
     --padding-block-section:40px;
     --heading:2rem;
     --sub-heading: 1.5rem;
     --bar-text:2rem;
     --paragraph:1.2rem;
     --section-background-color: rgba(0, 0, 0, 0.664);
-    --section-border: #f50449 solid 0.125rem ;
+    --section-border: white solid 0.125rem ;
 }
 
 .text-highlight{
@@ -41,7 +41,7 @@
 
 a{
     text-decoration: none;
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 ul{
@@ -98,7 +98,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-block: 2.5rem;
     height: 30rem;
     background-color: var(--section-background-color);
@@ -118,7 +118,7 @@ ul{
 
 .home-image img{
     height: 90%;
-    background-image: url(images/bg-image.jpg);
+    /* background-image: url(images/bg-image.jpg); */
 }
 
 .home-image img:hover {
@@ -145,15 +145,14 @@ ul{
 }
 
 .name-highlight::first-letter{
-    color: #f50449;
+    color:cyan;
     font-size: 200%;
 }
 
 /* sticky button */
 .sticky-button{
     position: fixed;
-    bottom: 3.5rem;
-    left: -0.2rem;
+    bottom: 1rem;
     align-self:flex-start;
     z-index: 50;
 }
@@ -162,6 +161,7 @@ ul{
     height:3rem;
     width: 3rem;
     text-align:center;
+    color: var(--primary-color);
 }
 
 .up-arrow img{
@@ -185,12 +185,12 @@ section{
     justify-content: flex-end;
     align-items: center;
     position: relative;
-    border-bottom: 5px solid white;
+    border-bottom: 5px solid black;
     padding-block: var(--padding-block-section);
 }
 
 #about{
-    border-top: 5px solid white;
+    border-top: 5px solid black;
 }
 
 /* heading bar of sections */
@@ -199,8 +199,8 @@ section{
     font-size: var(--bar-text);
     text-transform: uppercase;
     letter-spacing: 5px;
-    color: white;
-    border-bottom: 5px solid white;
+    color: var(--primary-color);
+    border-bottom: 5px solid black;
 }
 
 .rotate-left{
@@ -227,27 +227,28 @@ section{
 
 .section-container:nth-child(2n+1){
     flex-direction: row;
-    border-left: 5px white solid;
+    border-left: 5px black solid;
 }
 
 .section-container:nth-child(2n){
     flex-direction: row-reverse;
-    border-right: 5px white solid;
+    border-right: 5px black solid;
 }
 
 /* About section */
 
 .my_info{
-    gap: 2rem;
-    display: flex;
+    /* gap: 2rem; */
+    /* display: flex; */
     flex-basis: 90%;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;
+    align-items: center; */
+    padding-block: 5%;
     background-color: var(--section-background-color);
     border:var(--section-border);
 }
 
-.my-image{
+/* .my-image{
     height:20rem;
     margin-block: 0.8rem;
     margin-inline-start: 0.8rem;
@@ -260,13 +261,14 @@ section{
 }
 
 .my-image img:hover{
-    box-shadow: var(--box-shadow)
-}
+    box-shadow: var(--box-shadow);
+} */
 
 .about-text{
     padding:0.8rem;
     font-size: var(--paragraph);
     color: var(--primary-color);
+    font-weight: 600;
     text-align: center;
     flex-basis: 70%;
     margin-left: 0.5rem;
@@ -306,10 +308,9 @@ section{
 }
 
 .skills-container:hover{
-    background-color:var(--secondary-color);
+    background-color:var(--primary-color);
     color: white;
-    transition: all 0.3s ease-in;
-    background-position: center;
+    transition: all 0.5s ease-in-out;
     box-shadow: 0 0 0.5rem white;
     cursor: pointer;
 }
@@ -327,7 +328,7 @@ section{
 
 .education-container{
     position: relative;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     height:100%;
     overflow: hidden;
     border-radius: 2%;
@@ -351,7 +352,7 @@ section{
     bottom: 100%;
     left: 0;
     right: 0;
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     overflow: hidden;
     width: 100%;
     height:0;
@@ -381,8 +382,9 @@ section{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    border: white 0.3rem solid;
     overflow: hidden;
+    padding: 2%;
+    gap: 2rem;
     background-color: var(--section-background-color);
     border:var(--section-border);
 }
@@ -393,10 +395,9 @@ section{
 
 .project-image img{
     height: calc(100% - 0.8rem);
+    height: 100%;
     margin: 10px;
-    width: 100%;
-    border: black 5px solid;
-    border-radius: 5%;
+    width: 95%;
 }
 
 .about-project{
@@ -425,7 +426,7 @@ button{
     background: transparent;
     font-size: 0.95rem;
     border: 2px solid white;
-    margin-top: 2%;
+    margin-top: 3%;
     border-radius: 2px;
     color: white;
     font-family: sans-serif;
@@ -449,22 +450,30 @@ button:hover{
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-    color: var(--primary-color);
+    gap: 1rem;
+    color: var(--secondary-color);
 }
 
+#contact h1{
+    padding-top: 2%;
+    font-size: var(--bar-text);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--secondary-color);
+    border-bottom: 5px solid white;
+}
 .contact{
     display: flex;
     gap: 20px;
+    margin-bottom: 1%;
 }
 
 .contact-container{
     width: 50%;
     text-align: center;
+    margin-left: 6%;
 }
 
-#contact-form{
-    margin-left: 20%;
-}
 
 #contact-form input, textarea {
     max-width: 90%;
@@ -480,7 +489,18 @@ button:hover{
     font-size: 1.05rem;
 }
 
+#msg{
+    color: rgb(235, 19, 19);
+    width: fit-content;
+    font-size: 1.5rem;
+    display: block;
+    margin-top: -7rem;
+    margin-left: 30%;
+}
 
+.sub-btn{
+    margin-block: 2rem;
+}
 .details-container{
     width: 50%;
     margin-left: 6%;
@@ -516,11 +536,11 @@ button:hover{
 
 .copy-right{
     margin-block-start: 10px;
-    margin-inline: 0;
-    width: 120%;
+    padding: 0.3rem;
+    width: 100%;
     text-align: center;
     color: var(--secondary-color);
-    background-color: #d9dcdd;
+    border-top:white 0.2rem solid;
 }
 
 .copy-right a{

@@ -39,14 +39,14 @@
                     <h2>Hi, I'm <br><span class="name-highlight"> Prachi</span><span class="name-highlight">&nbsp;Gupta</span><br> from India.</h2>
                 </div>
                 <div class="home-image">
-                    <img src="images/my-image-removebg-preview.png" alt="Prachi's Picture"> 
+                    <img src="images/Prachi.jpg" alt="Prachi's Picture"> 
                 </div>
             </div>
 
             <!-- back to top -->
             <div class="sticky-button">
                 <div class="up-arrow">
-                    <a href="#"><img src="images/up.png" alt="up">Top</a>
+                    <a href="#"><img src="images/up.png" alt="up"></a>
                 </div>
             </div> 
 
@@ -55,9 +55,9 @@
                 <div id="about" class="section-container">
                     <div class="bar padding_half_rem rotate-left">About</div>
                     <div class="my_info">
-                        <div class="my-image">
+                        <!-- <div class="my-image">
                                 <img src="images/Prachi.jpg" alt="Prachi's Picture">
-                        </div>
+                        </div> -->
                          <!-- about text -->
                         <div class="about-text">
                             <p>
@@ -234,15 +234,17 @@
 
             <!-- Footer section -->
             <div id="contact"> 
-                <h1 class="bar" style="background:transparent;">Contact</h1>
+                <h1>Contact</h1>
                 <div class="contact">
                     <div class="contact-container">
-                        <form id="contact-form">
-                            <input id="input-name" name="name" type="text" placeholder="Your Name" required>
-                            <input id="input-email" name="input-email" type="email" required placeholder="Your Email" >
-                            <textarea id="input-message" name="input-message" rows="2" cols=40 placeholder="Message"></textarea>
+                        <form id="contact-form" name="submit-to-google-sheet">
+                            <imput name="Timestamp"></imput>
+                            <input id="input-name" name="Name" type="text" placeholder="Your Name" required>
+                            <input id="input-email" name="Email" type="email" required placeholder="Your Email" >
+                            <textarea id="input-message" name="Message" rows="2" cols=40 placeholder="Message"></textarea>
                             <button class="sub-btn" type="submit">Send message</button>
                         </form>
+                        <span id="msg"></span>
                     </div>
                     <div class="details-container">
                         <h3> Let's connect😃</h3>
@@ -312,10 +314,30 @@
                     </div>
                 </div>
                 <div class="copy-right">
-                    <h3>&copy Developed with ❤ by <a href="https://github.com/itzprachigupta" target="_blank">PRACHI GUPTA</a></h3>
+                    <h3>Copyright &copy 2023 Developed with ❤ by <a href="https://github.com/itzprachigupta" target="_blank">PRACHI GUPTA</a></h3>
                 </div>
             </div>
         </div>
+
+        <!-- for contact form -->
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxlZ_1jOVM-7GqqSM0tmUvJmxQtvW31kSs0ZKEHrxahm47EhUGP1nRRSR0vnl0DBsR8/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message Sent Successfully !!!"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
 
         <script>
             // accessing hamburger menu 
