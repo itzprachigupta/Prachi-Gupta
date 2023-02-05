@@ -32,6 +32,7 @@
 
 .text-highlight{
    color: var(--secondary-color);
+   color: cyan;
 }
 
 .text-highlight-size{
@@ -267,7 +268,7 @@ section{
 .about-text{
     padding:0.8rem;
     font-size: var(--paragraph);
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-weight: 600;
     text-align: center;
     flex-basis: 70%;
@@ -353,7 +354,7 @@ section{
     left: 0;
     right: 0;
     background-color: var(--primary-color);
-    overflow: hidden;
+    overflow:hidden;
     width: 100%;
     height:0;
     transition: .5s ease-in-out;

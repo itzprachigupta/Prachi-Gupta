@@ -88,6 +88,10 @@
     .skills-container{
         width:250px;
     }
+  
+    .school-details {
+        overflow-y: scroll;
+    }
 
     .project-area{
         grid-template-columns: repeat(2,1fr);
@@ -147,11 +151,6 @@
         margin:1rem;
     }
 
-    
-    .school-details {
-        overflow-y: scroll;
-    }
-
     .project-area{
         grid-template-columns: auto;
         margin: 1rem;
@@ -179,7 +178,16 @@
         justify-content: center;
         align-items: center;
         gap: 10px;
-        margin-bottom: 10%;
+        margin-bottom: 20%;
+    }
+
+    #msg{
+        color: rgb(235, 19, 19);
+        width: fit-content;
+        font-size: 1rem;
+        display: block;
+        margin-top: -10rem;
+        margin-left: 4%;
     }
 
     .details-container{
@@ -204,6 +212,10 @@
     #contact-form {
         margin-left: 0;
         margin-bottom: 10%;
+    }
+
+    .copy-right{
+        font-size:1rem ;
     }
 
 }
