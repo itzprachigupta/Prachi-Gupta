@@ -93,6 +93,38 @@
         overflow-y: scroll;
     }
 
+    .school-details{
+        display: inline;
+        text-align: center;
+        padding-block: 1rem;
+    }
+
+    .school-details h2, .school-details p{
+        font-size: 1rem;
+    }
+
+    /* Designing for scroll-bar */
+    ::-webkit-scrollbar {
+        width: 1rem;
+    }
+ 
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: gainsboro;
+        border-radius: 0.5rem;
+    }
+ 
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: rgb(31, 29, 29);
+        border-radius: 0.5rem;
+    }
+ 
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #363535;
+    }
+
     .project-area{
         grid-template-columns: repeat(2,1fr);
         margin: 10px;

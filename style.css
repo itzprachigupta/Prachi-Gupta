@@ -351,11 +351,8 @@ section{
     padding-inline: 1rem;
     gap: 0.5rem;
     bottom: 100%;
-    left: 0;
-    right: 0;
-    background-color: var(--primary-color);
+    background-color: var(--section-background-color);
     overflow:hidden;
-    width: 100%;
     height:0;
     transition: .5s ease-in-out;
 }
