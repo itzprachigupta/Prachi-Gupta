@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .container{
     min-height: 100vh;
     position:absolute;
@@ -69,20 +73,23 @@ ul{
 .nav-bar ul{
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 .nav-text a{
-    color: var(--primary-color);
-    padding: 0.2rem;
+    color: var(--secondary-color);
+    padding-inline: 0.8rem;
+    padding-block: 0.4rem;
     font-weight: 500;
     font-size: var(--sub-heading);
 }
 
 .nav-text a:hover{
     box-shadow:var(--box-shadow);
-    border-radius: 10%;
+    background-color: white;
+    color: var(--primary-color);
+    border-radius: 10px;
 }
 
 .hamburger-menu{
@@ -488,7 +495,7 @@ button:hover{
 }
 
 #msg{
-    color: rgb(235, 19, 19);
+    color: rgb(64, 138, 15);
     width: fit-content;
     font-size: 1.5rem;
     display: block;
@@ -533,7 +540,7 @@ button:hover{
 
 
 .copy-right{
-    margin-block-start: 10px;
+    margin-block-start: 1rem;
     padding: 0.3rem;
     width: 100%;
     text-align: center;
